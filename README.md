@@ -10,8 +10,27 @@ binary as 1 for bot-generated text and as 0 for human-generated.
 
 # Methods
 
-Approaches used in that research are text-based: TF-IDF logistic regression
-and 2 models of transformers. Comparative analysis was done and results presented. 
+Actually task of detection of bot-generated text we can consider as task of binary
+classification. Also I have selected text-based approach for that task, because
+now we have good enough and open-source transfromers (BERT-type), which
+are able to give high score for text classification task.
+
+Currently SOTA in text classification tasks are encoder-only transformers.
+Therefore for my project I have used this type models.
+
+The baseline is required because there is no previous art on the problem
+of bot-detection in texts on Russian in social networks. For baseline I have
+selected TF-IDF logistic regression, because it is simple method. I have used
+Tf-idf vectorizer and logistic regression algorithm from sklearn library.
+After that I have finetuned two pre-trained on Russian texts BERT-type
+transformers: rubert-tiny2 and ruBert-base.
+Rubert-tiny2 is comparatively small (not above 250 Mb), therefore fast for
+finetuning.
+I have finetuned rubert-tiny2 on both types of training set: "initial" and
+augmented (see details of augmentation approach in "Dataset" section).
+RuBert-base is bigger than rubert-tiny2 (above 700 Mb), therefore not so
+fast for finetuning, but usually give good score of metrics for classification
+tasks.
 
 # Report
 
