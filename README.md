@@ -22,6 +22,7 @@ The baseline is required because there is no previous art on the problem
 of bot-detection in texts on Russian in social networks. For baseline I have
 selected TF-IDF logistic regression, because it is simple method. I have used
 Tf-idf vectorizer and logistic regression algorithm from sklearn library.
+
 After that I have finetuned two pre-trained on Russian texts BERT-type
 transformers: rubert-tiny2 and ruBert-base.
 Rubert-tiny2 is comparatively small (not above 250 Mb), therefore fast for
