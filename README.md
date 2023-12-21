@@ -39,7 +39,7 @@ tasks.
 This project proposes a solution for task of detection of bot-generated texts
 in social networks on Russian. The task was managed by text-based methods: TF-IDF logistic regression and two types of transformers (both are encoder-only). Comparative analysis was done: the best result
 is finetuned transformer ruBert-base.
-So, this project result is first open-source model for detection of bot-generated
+So, this project result is model for detection of bot-generated
 texts in social networks on Russian, finetuned on Russian tweets dataset.
 
 For additional details please refer to report in pdf-file and project code in notebook in this repository.
